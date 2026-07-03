@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Surpresa</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #ffccd5, #fff0f3);
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #5c1a2d;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    }
+
+    input, button {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #ff4d6d;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #mensagem {
+      display: none;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card" id="senhaCard">
+    <h1>❤️ Oi, meu amor</h1>
+    <p>Para continuar, digite a senha de 4 dígitos: (Dica: Dia do Finalmente)</p>
+
+    <input type="password" id="senha" placeholder="Digite a senha">
+    <br>
+    <button onclick="verificarSenha()">Entrar</button>
+
+    <p id="erro" style="color:red;"></p>
+  </div>
+
+  <div class="card" id="mensagem">
+    <h1>Para você ❤️</h1>
+    <p>
+      Meu amor, se você chegou até aqui, é porque essa surpresa era para você.
+      <br><br>
+      Eu queria te lembrar o quanto você é especial para mim.
+      Obrigado por estar comigo, por dividir a vida comigo e por tornar meus dias melhores.
+      <br><br>
+      Parabéns pela sua data que é especial pra mim também. Espero comemorar muito mais aniversários com você,
+      até que eu morra kkk.
+      <br><br>
+      Poderia passar o dia citando as suas qualidades, dentre elas: carinhosa, muito inteligente, super dedicada, forte, engraçada, companheira para todas as horas. E a melhor de todas: A mulher mais linda que existe.
+      <br><br>
+      Que nesse dia tão especial (que na verdade é só dia 5 kkk) você possa aproveitar como você merece.
+      <br><br>
+      Te amo muito. ❤️
+    </p>
+  </div>
+
+  <script>
+    function verificarSenha() {
+      const senha = document.getElementById("senha").value;
+
+      if (senha === "1306") {
+        document.getElementById("senhaCard").style.display = "none";
+        document.getElementById("mensagem").style.display = "block";
+      } else {
+        document.getElementById("erro").innerText = "Senha errada, tenta de novo ❤️";
+      }
+    }
+  </script>
+
+</body>
+</html>
